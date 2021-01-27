@@ -3,7 +3,7 @@ package javaConditions;
 import java.util.Scanner;
 
 /**
- * Write a program that will take three numbers as input and will print the numbers in descending order.
+ * Write a program that will take three numbers as input and will print the numbers in ascending order.
  * @author gabsschrodinger (https://github.com/gabsschrodinger)
  * @status finished
  */
