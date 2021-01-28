@@ -27,6 +27,10 @@ public class Exercise6 {
 			}
 		} while(number != 0);
 		
+		if(i == 0) {
+			i++;
+		}
+		
 		System.out.println("Arithmetic mean of multiples of 3: "+ (sum/i));
 	}
 }
