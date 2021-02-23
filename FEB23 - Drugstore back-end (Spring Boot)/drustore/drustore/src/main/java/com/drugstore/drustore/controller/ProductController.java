@@ -1,8 +1,7 @@
-package org.generation.blog.controller;
+package com.drugstore.drustore.controller;
 
 import java.util.List;
-import org.generation.blog.model.Post;
-import org.generation.blog.repository.PostRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,58 +14,46 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.drugstore.drustore.model.ProductModel;
+import com.drugstore.drustore.repository.ProductRepository;
 
 @RestController
-@RequestMapping("/posts")
-@CrossOrigin("*")
-public class PostController {
+@RequestMapping("/product")
+@CrossOrigin
+public class ProductController {
 	
 	@Autowired
-	private PostRepository repository;
+	private ProductRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<Post>> GetAll() {
+	public ResponseEntity<List<ProductModel>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Post> GetById(@PathVariable long id) {
+	public ResponseEntity<ProductModel> GetById(@PathVariable long id) {
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/title/{title}")
-	public ResponseEntity<List<Post>> GetByTitle(@PathVariable String title) {
-		return ResponseEntity.ok(repository.findAllByTitleContainingIgnoreCase(title));
+	@GetMapping("/name/{name}")
+	public ResponseEntity<List<ProductModel>> GetByName(@PathVariable String name) {
+		return ResponseEntity.ok(repository.findAllByNameContainingIgnoreCase(name));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Post> post (@RequestBody Post post) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(post));
+	public ResponseEntity<ProductModel> post(@RequestBody ProductModel product) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(product));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Post> put (@RequestBody Post post) {
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(post));
+	public ResponseEntity<ProductModel> put(@RequestBody ProductModel product) {
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(product));
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
