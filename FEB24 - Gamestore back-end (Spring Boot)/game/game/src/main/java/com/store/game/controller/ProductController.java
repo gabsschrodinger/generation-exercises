@@ -31,9 +31,9 @@ public class ProductController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<ProductModel> getById(@PathVariable long id) {
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
+	@GetMapping("/{product_id}")
+	public ResponseEntity<ProductModel> getById(@PathVariable long product_id) {
+		return repository.findById(product_id).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
@@ -52,9 +52,9 @@ public class ProductController {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(product));
 	}
 	
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id) {
-		repository.deleteById(id);
+	@DeleteMapping("/{product_id}")
+	public void delete(@PathVariable long product_id) {
+		repository.deleteById(product_id);
 	}
 	
 }
