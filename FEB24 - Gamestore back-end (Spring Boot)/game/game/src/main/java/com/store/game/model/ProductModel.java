@@ -1,9 +1,12 @@
 package com.store.game.model;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -16,7 +19,7 @@ public class ProductModel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long product_id;
 	
 	@NotNull
 	private String title;
@@ -33,15 +36,11 @@ public class ProductModel {
 	@ManyToOne
 	@JsonIgnoreProperties("product")
 	private CategoryModel category;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
+	
+	@ManyToMany(mappedBy = "product")
+	@JsonIgnoreProperties("product")
+	Set<UserModel> user;
+	
 	public String getTitle() {
 		return title;
 	}
@@ -81,5 +80,20 @@ public class ProductModel {
 	public void setCategory(CategoryModel category) {
 		this.category = category;
 	}
-	
+
+	public long getProduct_id() {
+		return product_id;
+	}
+
+	public void setProduct_id(long product_id) {
+		this.product_id = product_id;
+	}
+
+	public Set<UserModel> getUser() {
+		return user;
+	}
+
+	public void setUser(Set<UserModel> user) {
+		this.user = user;
+	}
 }
