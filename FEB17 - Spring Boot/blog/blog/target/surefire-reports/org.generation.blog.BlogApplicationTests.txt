@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.generation.blog.BlogApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.164 s - in org.generation.blog.BlogApplicationTests
