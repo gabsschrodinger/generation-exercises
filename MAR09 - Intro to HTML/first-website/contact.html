@@ -6,47 +6,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Contact</title>
 </head>
 
 <body>
-    <ul>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
-    </ul>
+    <div class="container-nav">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-    <h1>Contact me:</h1>
+    <h1 class="text-center">Contact me:</h1>
 
-    <form action="">
-        <label for="name">Name:</label><br>
-        <input type="text" name="" id="name">
-        <br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" name="" id="email">
-        <br><br>
-        <label for="subject">Subject:</label><br>
-        <textarea name="subject" id="subject" cols="60" rows="5"></textarea>
-        <br><br>
-        <button>Send</button>
-    </form>
+    <section class="container">
+        <div class="text-section left-align">
+            <form action="">
+                <label for="name">Name:</label><br>
+                <input type="text" name="" id="name">
+                <br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" name="" id="email">
+                <br><br>
+                <label for="subject">Subject:</label><br>
+                <textarea name="subject" id="subject"></textarea>
+                <br><br>
+                <button>Send</button>
+            </form>
+        </div>
+    
+        <div class="img-section">
+            <h2 class="text-center">Address:</h2>
 
-    <h2>Address:</h2>
+            <p class="text-center">Av. Paulista, 1000</p>
+            <p class="text-center">São Paulo, SP</p>
 
-    <p>Av. Paulista, 1000</p>
-    <p>São Paulo, SP</p>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.094582671921!2d-46.65205600282523!3d-23.56504629410382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5994f2e15a7d%3A0xdeb92126793e5e90!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1sen!2sbr!4v1615299474553!5m2!1sen!2sbr" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
+        </div>
+    </section>
 
-    <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.094582671921!2d-46.65205600282523!3d-23.56504629410382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5994f2e15a7d%3A0xdeb92126793e5e90!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1sen!2sbr!4v1615299474553!5m2!1sen!2sbr" 
-    width="600" 
-    height="450" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy">
-    </iframe>
+    <footer class="footer">
+        <div class="links">
+            <a href="https://github.com/gabsschrodinger" class="link" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gfernandesribeiro/" class="link" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <span>Profile page by Gabriel Fernandes Ribeiro &copy</span>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/6c1b9b6ddb.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

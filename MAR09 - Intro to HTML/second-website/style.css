@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #778beb;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color: #f7d794;
+}
+
+.container-nav .navbar {
+    display: flex;
+    background-color: #f7d794;
+    height: 40px;
+}
+
+.container-nav .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.container-nav .navbar li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #778beb;
+}
+
+.container-nav .navbar li a:hover {
+    background-color: #f8a5c2;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    margin: 25px auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-section {
+    padding: 50px;
+}
+
+.text-section p {
+    text-align: justify;
+}
+
+.img-section {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-section img {
+    width: 500px;
+    border-radius: 100%;
+}
+
+.img-section iframe {
+    width: 600px;
+    height: 450px;
+    margin-bottom: 30px;
+}
+
+.container iframe {
+    width: 560px;
+    height: 315px;
+}
+
+.content {
+    padding: 50px;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: #303952 solid 2px;
+}
+
+.footer span {
+    padding: 20px;
+}
+
+.footer .links {
+    font-size: 2em;
+    padding: 10px;
+}
+
+.footer .links .link{
+    color: #303952;
+}
+
+.portfolio-link {
+    text-decoration: none;
+    color: #f7d794;
+}
+
+@media screen and (max-width: 1100px) {
+    .img-section img {
+        width: 300px;
+    }
+
+    .img-section iframe {
+        width: 300px;
+        height: 225px;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .img-section {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container iframe {
+        width: 280px;
+        height: 157px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-section {
+        padding: 20px;
+    }
+    
+    .img-section {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer span {
+        padding: 15px;
+        font-size: 0.7em;
+    }
+    
+    .footer .links {
+        font-size: 1.6em;
+        padding: 8px;
+    }
+
+    .text-section {
+        padding: 10px;
+    }
+    
+    .img-section {
+        padding: 0;
+    }
+
+    .img-section img {
+        width: 200px;
+    }
+
+    .container iframe {
+        width: 187px;
+        height: 105px;
+    }
+}
