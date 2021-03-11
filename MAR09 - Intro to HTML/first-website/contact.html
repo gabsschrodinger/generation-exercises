@@ -30,15 +30,19 @@
         <div class="text-section left-align">
             <form action="">
                 <label for="name">Name:</label><br>
-                <input type="text" name="" id="name">
-                <br><br>
+                <input type="text" name="" id="name" onkeyup="validateName()">
+                <div id="txtName"></div>
+                <br>
                 <label for="email">Email:</label><br>
-                <input type="email" name="" id="email">
-                <br><br>
+                <input type="email" name="" id="email" onkeyup="validateEmail()">
+                <div id="txtEmail"></div>
+                <br>
                 <label for="subject">Subject:</label><br>
-                <textarea name="subject" id="subject"></textarea>
-                <br><br>
-                <button>Send</button>
+                <textarea name="subject" id="subject" cols="60" rows="5" onkeyup="validateSubject()"></textarea>
+                <div id="txtSubject"></div>
+                <br>
+                <br>
+                <button onclick="send()">Send</button>
             </form>
         </div>
     
@@ -66,6 +70,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/6c1b9b6ddb.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
